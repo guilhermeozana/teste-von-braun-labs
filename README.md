@@ -1,10 +1,11 @@
 # Teste Wernher Von Braun Labs
 
-Frontend da aplicação Community IOT Device (CIoTD) feito em Angular, Angular Material.
+Frontend da aplicação Community IOT Device (CIoTD) feito em Angular e Angular Material.
 
 ## Pré-requisitos
 
 Node.js e npm instalados localmente
+
 Docker instalado (opcional)
 
 ## Executando Localmente
