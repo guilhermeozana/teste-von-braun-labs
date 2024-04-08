@@ -2,7 +2,7 @@
 
 Frontend da aplicação Community IOT Device (CIoTD) feito em Angular e Angular Material.
 
-Tomei a liberdade de criar uma api em C# utilizando .NET baseada na documentação da API fornecida para facilitar o desenvolvimento do frontend.
+Tomei a liberdade de criar uma api em C# utilizando .NET baseada na documentação da API fornecida para facilitar o desenvolvimento do frontend. A única diferença é que a api criada implementa autenticação token JWT.
 
 ## Pré-requisitos
 
