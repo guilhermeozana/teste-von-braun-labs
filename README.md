@@ -43,11 +43,15 @@ dotnet run
   
 $docker compose up -d
 
+## Acessando a aplicação
+
+Para acessar, abra o navegador e digite o seguinte endereço: http://localhost:4200/login
+
+Faça o login utilizando o *usuário* admin e *senha* admin.
+
 ## Design e Implementação
 
 A aplicação foi criada visando um design limpo, moderno e intuitivo seguindo as orientações do [Material Design](https://m2.material.io/design).
-
-
 
 ## Decisões de Design e Implementação
 
