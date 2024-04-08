@@ -1,0 +1,29 @@
+<h1 mat-dialog-title>Detalhes do Dispositivo 2</h1>
+<button mat-icon-button mat-dialog-close aria-label="Fechar" style="position: absolute; top: 10px; right: 10px; color: var(--mdc-dialog-supporting-text-color)">
+  <mat-icon>close</mat-icon>
+</button>
+<div mat-dialog-content>
+  <p><strong>Identificador:</strong> {{ data.identifier }}</p>
+  <p><strong>Fabricante:</strong> {{ data.manufacturer }}</p>
+  <p><strong>Descrição:</strong> {{ data.description }}</p>
+  <p><strong>URL: </strong> <a [href]="data.url" mat-button target="_blank">{{ data.url }}</a></p>
+
+  <h3>Comandos Disponíveis:</h3>
+  <ul>
+    <li *ngFor="let commandDescription of data.commands">
+      <strong>Operação:</strong> {{ commandDescription.operation }}<br>
+      <strong>Descrição:</strong> {{ commandDescription.description }}<br>
+      <strong>Resultado:</strong> {{ commandDescription.result }}<br>
+      <strong>Formato:</strong> {{ commandDescription.format }}<br>
+      <strong>Comando:</strong> {{ commandDescription.command.command }}<br>
+      <strong>Parâmetros:</strong>
+      <ul>
+        <li *ngFor="let parameter of commandDescription.command.parameters">
+          <strong>Nome:</strong> {{ parameter.name }}<br>
+          <strong>Descrição:</strong> {{ parameter.description }}
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+

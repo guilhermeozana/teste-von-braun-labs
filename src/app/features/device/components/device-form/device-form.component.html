@@ -1,0 +1,109 @@
+<h1 mat-dialog-title class="dialog-title">Cadastrar Novo Dispositivo</h1>
+<button mat-icon-button mat-dialog-close aria-label="Fechar" style="position: absolute; top: 10px; right: 10px; color: var(--mdc-dialog-supporting-text-color)">
+  <mat-icon>close</mat-icon>
+</button>
+<div mat-dialog-content>
+  <form [formGroup]="deviceForm" (ngSubmit)="save()">
+    <mat-form-field appearance="outline" *ngIf="data.isEdicao">
+      <mat-label>Identificador</mat-label>
+      <input matInput placeholder="Identificador do dispositivo" formControlName="identifier" readonly>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Fabricante</mat-label>
+      <input matInput placeholder="Fabricante do dispositivo" formControlName="manufacturer" required>
+
+      <mat-error *ngIf="deviceForm.controls['manufacturer'].hasError('required')">
+        Informe o Fabricante
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Descrição</mat-label>
+      <textarea matInput placeholder="Descrição do dispositivo" formControlName="description" required></textarea>
+      <mat-error *ngIf="deviceForm.controls['description'].hasError('required')">
+        Informe a Descrição
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>URL</mat-label>
+      <input matInput placeholder="URL do dispositivo" formControlName="url">
+      <mat-error *ngIf="deviceForm.controls['url'].hasError('pattern')">
+        Informe uma URL válida!
+      </mat-error>
+    </mat-form-field>
+
+    <div formArrayName="commands" class="command-container">
+      <div class="command-wrapper" *ngFor="let commandGroup of deviceForm.controls.commands.controls; let i = index" [formGroupName]="i">
+
+        <div class="command-header">
+          <span>Descrição do Comando {{i + 1}}</span>
+
+          <button type="button" mat-icon-button  (click)="removeCommand(i)">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </div>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Operação</mat-label>
+          <input matInput placeholder="Operação" formControlName="operation">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Descrição</mat-label>
+          <textarea matInput placeholder="Descrição do Comando" formControlName="description"></textarea>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Resultado</mat-label>
+          <input matInput placeholder="Resultado" formControlName="result">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Formato</mat-label>
+          <textarea matInput placeholder="Formato" formControlName="format"></textarea>
+        </mat-form-field>
+
+        <div formGroupName="command" class="command-detail-wrapper">
+          <mat-form-field appearance="outline">
+            <mat-label>Comando</mat-label>
+            <input matInput placeholder="Comando" formControlName="command">
+          </mat-form-field>
+
+          <div formArrayName="parameters" class="command-container">
+            <div class="command-wrapper" *ngFor="let parameterGroup of commandGroup.controls.command.controls.parameters.controls; let j = index" [formGroupName]="j">
+              <div class="command-header">
+                <span>Parâmetro {{j + 1}}</span>
+
+                <button type="button" mat-icon-button  (click)="removeParameter(i, j)">
+                  <mat-icon>delete</mat-icon>
+                </button>
+              </div>
+
+              <mat-form-field appearance="outline">
+                <mat-label>Nome do Parâmetro</mat-label>
+                <input matInput placeholder="Nome do Parâmetro" formControlName="name">
+              </mat-form-field>
+              <mat-form-field appearance="outline">
+                <mat-label>Descrição do Parâmetro</mat-label>
+                <textarea matInput placeholder="Descrição do Parâmetro" formControlName="description"></textarea>
+              </mat-form-field>
+            </div>
+          </div>
+          <button type="button" mat-button (click)="addParameter(i)">
+            <mat-icon>add</mat-icon> Adicionar Parâmetro
+          </button>
+        </div>
+      </div>
+    </div>
+    <button type="button" mat-button (click)="addCommand()">
+      <mat-icon>add</mat-icon> Adicionar Comando
+    </button>
+    <div mat-dialog-actions class="form-action-button-wrapper">
+      <button type="button" mat-stroked-button (click)="cancel()">Cancelar</button>
+      <button mat-raised-button color="primary" type="submit">Salvar</button>
+    </div>
+  </form>
+</div>
+

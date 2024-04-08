@@ -1,0 +1,38 @@
+::ng-deep .mat-mdc-dialog-surface {
+  border-radius: 15px !important;
+  padding: 10px;
+}
+
+.dialog-title {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+
+.command-wrapper, .parameter-wrapper, .command-detail-wrapper {
+  border: 1px solid var(--mat-divider-color);
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 10px;
+}
+
+.command-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 10px;
+}
+
+mat-form-field {
+  padding: 7px;
+}
+
+@media (max-width: 768px) {
+
+  .dialog-title {
+    font-size: 22px;
+    font-weight: bold;
+  }
+
+}

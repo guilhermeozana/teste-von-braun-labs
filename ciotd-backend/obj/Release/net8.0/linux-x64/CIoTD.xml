@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CIoTD</name>
+    </assembly>
+    <members>
+        <member name="M:CIoTD.Presentation.Controllers.DeviceController.GetAll">
+            <summary></summary>
+            <returns></returns>
+            <response code="200">Sucesso</response>
+            <response code="401">Não autorizado</response>
+            <response code="500">Erro Interno do Servidor</response>
+        </member>
+        <member name="M:CIoTD.Presentation.Controllers.DeviceController.GetById(System.String)">
+            <summary></summary>
+            <param name="id">Identificador do dispositivo</param>
+            <returns></returns>
+            <response code="200">Sucesso</response>
+            <response code="401">Não autorizado</response>
+            <response code="404">Não encontrado</response>
+            <response code="500">Erro Interno do Servidor</response>
+        </member>
+        <member name="M:CIoTD.Presentation.Controllers.DeviceController.Create(CIoTD.Domain.Devices)">
+            <summary></summary>
+            <param name="device">Dispositivo</param>
+            <returns></returns>
+            <response code="201">Sucesso</response>
+            <response code="400">Requisição inválida</response>
+            <response code="401">Não autorizado</response>
+            <response code="500">Erro Interno do Servidor</response>
+        </member>
+        <member name="M:CIoTD.Presentation.Controllers.DeviceController.Update(System.String,CIoTD.Domain.Devices)">
+            <summary></summary>
+            <param name="id">Identificador do dispositivo</param>
+            <param name="device">Dispositivo</param>
+            <returns></returns>
+            <response code="204">Sucesso</response>
+            <response code="401">Não autorizado</response>
+            <response code="404">Não encontrado</response>
+            <response code="500">Erro Interno do Servidor</response>
+        </member>
+        <member name="M:CIoTD.Presentation.Controllers.DeviceController.Delete(System.String)">
+            <summary></summary>
+            <param name="id">Identificador do dispositivo</param>
+            <returns></returns>
+            <response code="200">Sucesso</response>
+            <response code="401">Não autorizado</response>
+            <response code="404">Não encontrado</response>
+            <response code="500">Erro Interno do Servidor</response>
+        </member>
+        <member name="M:CIoTD.Presentation.Controllers.DeviceController.RainfallIntensity(System.String,System.String)">
+            <summary></summary>
+            <param name="id">Identificador do dispositivo</param>
+            <param name="command">Comando para recuperar a volumetria de chuva</param>
+            <returns></returns>
+            <response code="200">Sucesso</response>
+            <response code="400">Requisição inválida</response>
+            <response code="401">Não autorizado</response>
+            <response code="404">Não encontrado</response>
+            <response code="500">Erro Interno do Servidor</response>
+        </member>
+    </members>
+</doc>

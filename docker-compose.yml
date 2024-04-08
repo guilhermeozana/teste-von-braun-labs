@@ -1,0 +1,30 @@
+version: '3.9'
+services:
+  ciotd-frontend:
+    container_name: ciotd-frontend
+    build:
+      context: .
+      args:
+        EXCLUDE_DIR: ./ciotd-backend
+    image: guilhermeozana/ciotd-frontend:v1
+    ports:
+      - 4200:80
+    expose:
+      - 4200
+    networks:
+      - ciotd-network
+
+  ciotd-backend:
+    container_name: ciotd-backend
+    build: ./ciotd-backend
+    image: guilhermeozana/ciotd-backend:v1
+    ports:
+      - 8000:80
+    expose:
+      - 8000
+    networks:
+      - ciotd-network
+
+networks:
+  ciotd-network:
+    driver: bridge

@@ -1,0 +1,31 @@
+<h1 class="component-title">Meus dispositivos</h1>
+
+<div class="devices-container">
+  <mat-card *ngFor="let device of paginatedDevices" class="device-card mat-elevation-z3" (click)="openDeviceDetailsDialog($event, device)">
+    <mat-card-header>
+      <mat-card-title>{{ device.description }}</mat-card-title>
+      <mat-card-subtitle>Fabricante: {{ device.manufacturer }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <span>URL:</span><a class="device-link" mat-button [href]="device.url" target="_blank">{{ device.url }}</a>
+    </mat-card-content>
+
+    <mat-card-actions>
+
+      <button mat-icon-button matTooltip="Editar" (click)="editDevice($event, device)">
+        <mat-icon>edit</mat-icon>
+      </button>
+      <button mat-icon-button matTooltip="Excluir" (click)="deleteDevice($event, device)">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </mat-card-actions>
+  </mat-card>
+  <mat-card class="add-card mat-elevation-z3" matTooltip="Adicionar Dispositivo" (click)="addDevice()">
+    <mat-card-content>
+      <mat-icon class="add-icon">add</mat-icon>
+    </mat-card-content>
+  </mat-card>
+</div>
+<div class="paginator-container">
+  <mat-paginator [pageSizeOptions]="[5, 10, 25]" [pageSize]="pageSize" [length]="devices ? devices.length: 0" (page)="onPageChange($event)" showFirstLastButtons></mat-paginator>
+</div>

@@ -1,0 +1,168 @@
+
+[
+  {
+    "identifier": "device1",
+    "description": "Este é o dispositivo 1",
+    "manufacturer": "Fabricante A",
+    "url": "http://device1.com",
+    "commands": [
+      {
+        "operation": "operacao1",
+        "description": "Descrição da operação 1",
+        "command": {
+          "command": "comando1",
+          "parameters": [
+            {
+              "name": "parametro1",
+              "description": "Descrição do parâmetro 1"
+            },
+            {
+              "name": "parametro2",
+              "description": "Descrição do parâmetro 2"
+            }
+          ]
+        },
+        "result": "Resultado esperado da operação 1",
+        "format": "Formato esperado do resultado da operação 1"
+      }
+    ]
+  },
+  {
+    "identifier": "device2",
+    "description": "Este é o dispositivo 2",
+    "manufacturer": "Fabricante B",
+    "url": "http://device2.com",
+    "commands": [
+      {
+        "operation": "operacao2",
+        "description": "Descrição da operação 2",
+        "command": {
+          "command": "comando2",
+          "parameters": [
+            {
+              "name": "parametro1",
+              "description": "Descrição do parâmetro 1"
+            }
+          ]
+        },
+        "result": "Resultado esperado da operação 2",
+        "format": "Formato esperado do resultado da operação 2"
+      }
+    ]
+  },
+  {
+    "identifier": "device2",
+    "description": "Este é o dispositivo 2",
+    "manufacturer": "Fabricante B",
+    "url": "http://device2.com",
+    "commands": [
+      {
+        "operation": "operacao2",
+        "description": "Descrição da operação 2",
+        "command": {
+          "command": "comando2",
+          "parameters": [
+            {
+              "name": "parametro1",
+              "description": "Descrição do parâmetro 1"
+            }
+          ]
+        },
+        "result": "Resultado esperado da operação 2",
+        "format": "Formato esperado do resultado da operação 2"
+      }
+    ]
+  },
+  {
+    "identifier": "device2",
+    "description": "Este é o dispositivo 2",
+    "manufacturer": "Fabricante B",
+    "url": "http://device2.com",
+    "commands": [
+      {
+        "operation": "operacao2",
+        "description": "Descrição da operação 2",
+        "command": {
+          "command": "comando2",
+          "parameters": [
+            {
+              "name": "parametro1",
+              "description": "Descrição do parâmetro 1"
+            }
+          ]
+        },
+        "result": "Resultado esperado da operação 2",
+        "format": "Formato esperado do resultado da operação 2"
+      }
+    ]
+  },
+  {
+    "identifier": "device2",
+    "description": "Este é o dispositivo 2",
+    "manufacturer": "Fabricante B",
+    "url": "http://device2.com",
+    "commands": [
+      {
+        "operation": "operacao2",
+        "description": "Descrição da operação 2",
+        "command": {
+          "command": "comando2",
+          "parameters": [
+            {
+              "name": "parametro1",
+              "description": "Descrição do parâmetro 1"
+            }
+          ]
+        },
+        "result": "Resultado esperado da operação 2",
+        "format": "Formato esperado do resultado da operação 2"
+      }
+    ]
+  },
+  {
+    "identifier": "device2",
+    "description": "Este é o dispositivo 2",
+    "manufacturer": "Fabricante B",
+    "url": "http://device2.com",
+    "commands": [
+      {
+        "operation": "operacao2",
+        "description": "Descrição da operação 2",
+        "command": {
+          "command": "comando2",
+          "parameters": [
+            {
+              "name": "parametro1",
+              "description": "Descrição do parâmetro 1"
+            }
+          ]
+        },
+        "result": "Resultado esperado da operação 2",
+        "format": "Formato esperado do resultado da operação 2"
+      }
+    ]
+  },
+  {
+    "identifier": "device2",
+    "description": "Este é o dispositivo 2",
+    "manufacturer": "Fabricante B",
+    "url": "http://device2.com",
+    "commands": [
+      {
+        "operation": "operacao2",
+        "description": "Descrição da operação 2",
+        "command": {
+          "command": "comando2",
+          "parameters": [
+            {
+              "name": "parametro1",
+              "description": "Descrição do parâmetro 1"
+            }
+          ]
+        },
+        "result": "Resultado esperado da operação 2",
+        "format": "Formato esperado do resultado da operação 2"
+      }
+    ]
+  }
+]

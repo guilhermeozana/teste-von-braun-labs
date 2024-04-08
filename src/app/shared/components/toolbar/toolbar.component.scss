@@ -1,0 +1,34 @@
+mat-toolbar {
+  position: relative;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
+  z-index: 99;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-items {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  width: 210px;
+}
+
+.logo-wrapper {
+  display: flex;
+  height: 90%;
+}
+
+.logo {
+  height: 100%;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.theme-toggle-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 70px;
+}

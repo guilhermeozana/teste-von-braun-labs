@@ -1,0 +1,38 @@
+mat-card {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  box-shadow: none;
+  background-color: transparent;
+  margin-top: 40px;
+}
+
+mat-card-header {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+mat-card-title {
+  font-size: 32px;
+  padding-bottom: 15px;
+}
+
+img {
+  width: 35%;
+}
+
+@media (max-width: 768px) {
+
+  mat-card-title {
+    font-size: 28px;
+    padding-bottom: 10px;
+  }
+
+  img {
+    width: 60%;
+  }
+
+}

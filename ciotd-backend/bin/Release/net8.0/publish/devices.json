@@ -1,0 +1,1 @@
+[{"Identifier":"88afc829-777e-4331-b961-c5d517acf5dc","Description":"string","Manufacturer":"PredictWeater","Url":"string","Commands":[{"Command":"get_rainfall_intensity","Parameters":[{"Name":"string","Description":"string"}]}],"RainFallIntensities":[{"DateTime":"2024-04-04T19:22:08.224Z","Volumetry":0},{"DateTime":"2024-04-04T21:14:06.9265477-03:00","Volumetry":310.53}]}]

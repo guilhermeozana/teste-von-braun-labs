@@ -1,1 +1,149 @@
-/* You can add global styles to this file, and also import other style files */
+@use "@angular/material" as mat;
+@include mat.core();
+
+
+:root {
+  --primary-color: #4269ea;
+  --primary-color2: #4133b6;
+  --accent-color: #37474f;
+  --accent-color-2: #263238;
+}
+
+
+$custom-primary-palette: mat.define-palette((
+  50:  #e3f1ff,
+  100: #bddbff,
+  200: #92c6ff,
+  300: #66afff,
+  400: #4a9dff,
+  500: #3b8bff,
+  600: #407cff,
+  700: #4269ea,
+  800: #4257d7,
+  900: #4133b6,
+  contrast: (
+    50: rgba(black, 0.87),
+    100: rgba(black, 0.87),
+    200: rgba(black, 0.87),
+    300: rgba(black, 0.87),
+    400: #ffffff,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+  ),
+));
+
+$custom-accent-palette: (
+  50: #eceff1,
+  100: #cfd8dc,
+  200: #b0bec5,
+  300: #90a4ae,
+  400: #78909c,
+  500: #607d8b,
+  600: #546e7a,
+  700: #455a64,
+  800: #37474f,
+  900: #263238,
+  contrast: (
+    50: rgba(black, 0.87),
+    100: rgba(black, 0.87),
+    200: rgba(black, 0.87),
+    300: rgba(black, 0.87),
+    400: #ffffff,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+  ),
+);
+
+
+//Define light theme
+$light-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: mat.define-palette($custom-primary-palette, 600),
+      accent: mat.define-palette($custom-accent-palette, 900),
+      warn: mat.define-palette(mat.$red-palette),
+    ),
+  )
+);
+
+//Define dark theme
+$dark-theme: mat.define-dark-theme(
+  (
+    color: (
+      primary: mat.define-palette($custom-primary-palette, 600),
+      accent: mat.define-palette($custom-accent-palette, 900),
+      warn: mat.define-palette(mat.$red-palette),
+    ),
+  )
+);
+
+.light-theme {
+  @include mat.all-component-themes($light-theme);
+  @include mat.core-theme($light-theme);
+}
+
+.dark-theme {
+  @include mat.core-color($dark-theme);
+  @include mat.all-component-colors($dark-theme);
+}
+
+.component-container {
+  width: 90%;
+  height: 100%;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+.mdc-text-field--outlined  {
+  width: 100% !important;
+  --mdc-outlined-text-field-container-shape: 13px !important;
+}
+
+.button-wrapper button {
+  width: 100%;
+  border-radius: 20px;
+  padding: 22px;
+}
+
+.form-action-button-wrapper button {
+  border-radius: 20px;
+  padding: 22px;
+}
+
+.form-action-button-wrapper {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  width: 100%;
+  padding: 20px 10px !important;
+}
+
+.component-title {
+  font-size: 40px !important;
+  font-weight: bold !important;
+  margin: 20px 0 35px 0 !important;
+}
+
+
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+
+  .component-title {
+    font-size: 28px !important;
+    font-weight: bold !important;
+    margin-bottom: 15px !important;
+  }
+
+}

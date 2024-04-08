@@ -1,0 +1,65 @@
+mat-sidenav-container {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  padding-top: 80px;
+}
+
+mat-sidenav {
+  padding-top: 25px;
+}
+
+mat-sidenav-content {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  margin-top: -80px;
+  flex: 1;
+  z-index: 0;
+  border-radius: 0 !important;
+}
+
+app-footer {
+  flex-shrink: 0;
+  z-index: 99;
+}
+
+mat-icon {
+  opacity: 1
+}
+
+mat-nav-list .mdc-list-item--with-leading-icon .mdc-list-item__start {
+  color: unset;
+}
+
+.loader-container {
+  position: fixed;
+  height: 100vh !important;
+  width: 100% !important;
+  background: #000000;
+  opacity: 0.8;
+  z-index: 100;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  cursor: progress;
+}
+
+.loader {
+  width: 200px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  top: 40%;
+  margin: auto;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+
+  mat-sidenav {
+    width: 85%;
+  }
+
+}

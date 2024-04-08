@@ -1,0 +1,52 @@
+<div class="theme-toggle-wrapper">
+  <mat-icon matTooltip="Tema Escuro">nights_stay</mat-icon>
+  <mat-slide-toggle color="primary" [(ngModel)]="isDark" (change)="onSwitchThemeMode()"></mat-slide-toggle>
+</div>
+<h1 class="ciotd" [@slideInOutRight]>CIoTD</h1>
+
+<mat-card class="login-container" [@slideInOut]>
+  <mat-card-header>
+    <mat-card-title>Fazer Login</mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <mat-form-field appearance="outline" class="form-field-fw">
+        <mat-label>Usuário</mat-label>
+        <input
+          formControlName="username"
+          matInput
+          required
+          type="text"/>
+          <mat-error *ngIf="form.controls['username'].hasError('required')">
+            Informe o seu usuário
+          </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="form-field-fw">
+        <mat-label>Senha</mat-label>
+        <input
+          formControlName="password"
+          matInput
+          required
+          type="password"
+          [type]="hide ? 'password' : 'text'"/>
+          <button type="button" mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+
+        <mat-error *ngIf="form.controls['password'].hasError('required')">
+          Informe a sua senha
+        </mat-error>
+      </mat-form-field>
+      <div class="button-wrapper">
+        <button color="primary" mat-raised-button type="submit">Entrar</button>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>
+
+<mat-card class="image-container">
+  <h1 class="ciotd-image" [@slideInOutRight]>CIoTD</h1>
+  <img [src]="'/assets/images/login-image.svg?ver=' + randomNumber">
+</mat-card>

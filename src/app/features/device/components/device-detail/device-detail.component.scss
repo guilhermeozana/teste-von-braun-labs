@@ -1,0 +1,21 @@
+
+::ng-deep .mat-mdc-dialog-surface {
+  border-radius: 15px !important;
+  padding: 10px;
+}
+
+.cdk-overlay-pane {
+  width: 80vw !important;
+  border-radius: 15px !important;
+}
+
+.button-close {
+  position: absolute !important;
+  top: 10px !important;
+  right: 10px !important;
+  color: var(--mdc-dialog-supporting-text-color) !important;
+}
+
+@media (max-width: 768px) {
+
+}

@@ -1,0 +1,19 @@
+<mat-toolbar color="accent">
+  <div class="left-items">
+    <button
+      mat-icon-button
+      class="toggle-button"
+      *ngIf="isLoggedIn$ | async"
+      (click)="sidenav.toggle()">
+      <mat-icon fontIcon="menu"></mat-icon>
+    </button>
+
+    <button class="logo" mat-button routerLink="">CIoTD</button>
+  </div>
+
+  <div class="theme-toggle-wrapper">
+    <mat-icon matTooltip="Tema Escuro">nights_stay</mat-icon>
+    <mat-slide-toggle color="primary" [(ngModel)]="isDark" (change)="onSwitchThemeMode()"></mat-slide-toggle>
+  </div>
+
+</mat-toolbar>
