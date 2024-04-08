@@ -47,7 +47,9 @@ $docker compose up -d
 
 Para acessar, abra o navegador e digite o seguinte endereço: http://localhost:4200/login
 
-Faça o login utilizando o **usuário** admin e **senha** admin.
+Faça o login utilizando as seguintes credenciais: 
+  - usuário: *admin*
+  - senha: *admin*.
 
 ## Design e Implementação
 
