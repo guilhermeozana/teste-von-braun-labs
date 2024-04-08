@@ -49,7 +49,7 @@ Para acessar, abra o navegador e digite o seguinte endereço: http://localhost:4
 
 Faça o login utilizando as seguintes credenciais: 
   - usuário: admin
-  - senha: admin.
+  - senha: admin
 
 ## Design e Implementação
 
