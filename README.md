@@ -2,9 +2,15 @@
 
 Frontend da aplicação Community IOT Device (CIoTD) feito em Angular e Angular Material.
 
+Tomei a liberdade de criar uma api em C# utilizando .NET para facilitar o desenvolvimento do frontend.
+
 ## Pré-requisitos
 
-Node.js e npm instalados localmente
+### Para executar em ambiente local
+
+Node.js, npm e SDK do .NET Framework
+
+### Para executar com docker
 
 Docker instalado (opcional)
 
@@ -14,28 +20,25 @@ Docker instalado (opcional)
 
 git clone [https://github.com/seu-usuario/seu-repositorio.git](https://github.com/guilhermeozana/teste-wernher-von-braun-labs.git)
 
-cd teste-wernher-von-braun-labs
+$cd teste-wernher-von-braun-labs
 
 ### 2. Instalando Dependências
 
-npm install
+$npm install
 
-### 3. Executando o Servidor de Desenvolvimento
-
-ng serve
+### 3. Executando o Frontend
+$ng serve
 
 Acesse http://localhost:4200 no seu navegador para visualizar a aplicação.
 
+### 4. Executando o Backend
+
+cd ciotd-backend
+
+dotnet run
+
 ## Executando com Docker (opcional)
 
-### 1. Crie a network
-
-docker network create ciotd-network
-
-### 2. Execute o Frontend
-
-docker run -d --name ciotd-frontend -p 4200:80 --network ciotd-network guilhermeozana/ciotd-frontend:latest
+### 1. Executando o Docker Compose
   
-### 3. Execute o Backend
-
-docker run -d --name ciotd-frontend -p 8000:80 --network ciotd-network guilhermeozana/ciotd-frontend:latest
+$docker compose up
